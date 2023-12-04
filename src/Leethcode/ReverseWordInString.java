@@ -1,10 +1,10 @@
 package Leethcode;
 
-public class ReverseWordInStringSol {
+public class ReverseWordInString {
 
 	public static void main(String[] args) {
 
-		System.out.println(" Output...."+ReverseWordInStringSol.reverseWords("Sky       is                  blue  little"));
+		System.out.println(" Output...."+ReverseWordInString.reverseWords("Sky       is                  blue  little"));
 
 	}
 

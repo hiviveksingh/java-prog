@@ -20,14 +20,15 @@ Some notes for interview:
 
 3.	Below are some coding problems to prepare for interview: 
 
+//TwoSum	
 1.	Two Sum 
 	a.	https://leetcode.com/problems/two-sum/ 
 
- 
+ //ReverseWordInString
 2.	Reverse Words in a String 
 	a.	https://leetcode.com/problems/reverse-words-in-a-string/ 
 
- 
+ //AnyHighest
 3.	Second Highest Salary 
 	a.	https://leetcode.com/problems/second-highest-salary/ 
 
@@ -35,7 +36,7 @@ Some notes for interview:
 4.	Longest increasing subsequence 
 	a.	https://leetcode.com/problems/longest-increasing-subsequence/ 
 
- 
+ //MinOperationToMakeArrayIncresing
 5.	Minimum operations to make the array increasing. 
 	a.	https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing/ 
 
@@ -44,7 +45,7 @@ Some notes for interview:
 	a.	https://leetcode.com/problems/the-time-when-the-network-becomes-idle/ 
 	b.	https://leetcode.com/problems/the-time-when-the-network-becomes-idle/solutions/2099087/java-soln-using-bfs/ 
 
- 
+ //SmallestSubsequence
 7.	Smallest K-Length Subsequence with Occurrences of a Letter 
 	a.	https://leetcode.com/problems/smallest-k-length-subsequence-with-occurrences-of-a-letter/ 
 
@@ -52,49 +53,49 @@ Some notes for interview:
 8.	Maximum Running Time of N Computers 
 	a.	https://leetcode.com/problems/maximum-running-time-of-n-computers/ 
 
- 
+ //PourWaterInBucket
 9.	Pour Water Between Buckets to Make Water Levels Equal (Repeated)
 	a.	https://walkccc.me/LeetCode/problems/2137/ 
 
- 
+ //BinaryGap
 10.	Binary Gap 
 	a.	https://leetcode.com/problems/binary-gap/ 
 
- 
+ //BinaryGap
 11.	Iterations BinaryGap 
 	a.	https://medium.com/@sichangpark/codility-1-1-iterations-binarygap-8d48866db312 
 
- 
+//OddOccurrencesInArray
 12.	Arrays OddOccurrencesInArray (Repeated)
 	a.	https://medium.com/@sichangpark/codility-2-1-arrays-oddoccurrencesinarray-cf4c1f7d7caf 
 
- 
+ //SingleNumber
 13.	Single Number 
 	a.	https://leetcode.com/problems/single-number/ 
 
- 
+ //AnyHighest
 14.	Find the Kth Largest Integer in the Array (Repeated)
 	a.	https://leetcode.com/problems/find-the-kth-largest-integer-in-the-array/ 
 
- 
+  //AnyHighest
 15.	Find second largest element from an array (Repeated)
 	a.	https://leetcode.com/discuss/general-discussion/798920/find-second-largest-element-from-an-array 
 
- 
+  //AnyHighest
 16.	Max and Second Max number in Array (Repeated)
 	a.	https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/solutions/719451/max-and-second-max-number-in-array/ 
 
- 
-17.	Find maximum sum pair with same digit sum (Repeated)
+ //MaxSumPairWithSameDigitSum
+17.	Find maximum sum pair with same digit sum (Repeated) 
 	a.	https://www.geeksforgeeks.org/find-maximum-sum-pair-with-same-digit-sum/ 
 
- 
-18.	Max Sum of a Pair with Equal Sum of Digits (Repeated)
+ //MaxSumOfAPairWithEqualSumOfDigits
+18.	Max Sum of a Pair with Equal Sum of Digits (Repeated) 
 	a.	https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits/ 
 
- 
-19.	There is an array of integers which has numbers from 1 digit to 5digits. {10,100, 123, 15333}. We need to find the max sum of two integers that has the same first and last 
-	digit. In this we have 10 and 100, => 110 other sequence is 123 and 15333, ==> 15456 If there are no integers that share first and last digit, then we have to return -1 
+ //MaxSumOfAPairsWithSameStartEndNumber
+19.	There is an array of integers which has numbers from 1 digit to 5digits. {10,100, 123, 15333}. We need to find the max sum of two integers 
+	that has the same first and lastdigit. In this we have 10 and 100, => 110 other sequence is 123 and 15333, ==> 15456 If there are no integers that share first and last digit, then we have to return -1 
 
 20.	You are given an array of integers. Your task is to create pairs of them, such that every created pair has the same sum. This sum is not specified, but the number of 	
 	created pairs should be the maximum possible. Each array element may belong to one pair only. Write a function.
@@ -105,8 +106,22 @@ Some notes for interview:
 	(a). Given A = [1, 9, 8, 100, 2], the function should return 2. The pairs are (A[0]. A[1]) and (A[2], A[4]); the sum of each pair is 10.
 	(b). Given A = [2, 2, 2, 3], the function should return 1. Although, for instance, A[0]+A[1] = A[0]+A[2], the pairs (A[0], A[1]) and (A[0], A[2]) cannot exist at the same time, because they both contain a common element, A[0].
 
-21.	Rick is really fond of fruit juices, but he is bored of their traditional flavours. Therefore, he has decided to mix as many of them as possible to obtain something 
-	entirely new as a result. He has N glasses, numbered from 0 to N-1, each containing a different kind of juice. The J-th glass has capacity[J] units of capacity and contains juice[J] units of juice. In each glass there is at least one unit of juice. Rick wants to create a multivitamin mix in one of the glasses. He is going to do it by pouring juice from several other glasses into the chosen one. Each of the used glasses must be empty at the end (all of the juice from each glass has to be poured out). What is the maximum number of flavours that Rick can mix? Write a function:class Solution {public int solution(int[] juice, int[] capacity); }that, given arrays juice and capacity, both of size N, returns the maximum number of flavours that Rick can mix in a single glass. Examples: Given juice = [10, 2, 1, 1] and capacity = [10, 3, 2, 2], your function should return 2. Rick can pour juice from the 3rd glass into the 2nd one. Given juice = [1, 2, 3, 4] and capacity = [3, 6, 4, 4], your function should return 3. Rick can pour juice from the 0th and 2nd glasses into the 1st one. Given juice = [2, 3] and capacity = [3, 4], your function should return 1. No matter which glass he chooses, Rick cannot pour juice from the other one into it. The maximum number of flavours in the chosen glass is 1. Given juice = [1, 1, 5] and capacity = [6, 5, 8], your function should return 3. Rick can mix all juices in the 2nd glass. Write an efficient algorithm for the following assumptions: N is an integer within the range [2.100,000];
+21.	Rick is really fond of fruit juices, but he is bored of their traditional flavours. Therefore, he has decided to mix as many of them as possible to obtain something entirely new as a result. 
+	
+	He has N glasses, numbered from 0 to N-1, each containing a different kind of juice. The J-th glass has capacity[J] units of capacity and contains juice[J] units of juice. 
+	In each glass there is at least one unit of juice. 	Rick wants to create a multivitamin mix in one of the glasses. He is going to do it by pouring juice from several other glasses into the chosen one.
+	Each of the used glasses must be empty at the end (all of the juice from each glass has to be poured out). 
+	
+	What is the maximum number of flavours that Rick can mix? Write a function:Codelity multivitamin 
+	class Solution {public int solution(int[] juice, int[] capacity); }that, given arrays juice and capacity,both of size N, returns the maximum number of flavours that Rick can mix in a single glass. 
+	
+	
+	Examples: Given juice = [10, 2, 1, 1] and capacity = [10, 3, 2, 2], your function should return 2.
+	Rick can pour juice from the 3rd glass into the 2nd one. Given juice = [1, 2, 3, 4] and capacity = [3, 6, 4, 4], your function should return 3.
+	Rick can pour juice from the 0th and 2nd glasses into the 1st one. Given juice = [2, 3] and capacity = [3, 4], your function should return 1. 
+	No matter which glass he chooses, Rick cannot pour juice from the other one into it. 
+	The maximum number of flavours in the chosen glass is 1. Given juice = [1, 1, 5] and capacity = [6, 5, 8], your function should return 3. 
+	Rick can mix all juices in the 2nd glass. Write an efficient algorithm for the following assumptions: N is an integer within the range [2.100,000];
 	each element of arrays juice, capacity is an integer within the range [1..1,000,000,000];
 	arrays juice and capacity have the same length, equal to N;
 	for each J juice[J] ≤ capacity[J].
