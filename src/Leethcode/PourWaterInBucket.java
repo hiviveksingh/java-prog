@@ -36,7 +36,7 @@ public class PourWaterInBucket {
 
 	}
 
-	private static boolean canReAdjustWater(int[] buckets, double target, double kPercentage) {
+	private static boolean canReAdjustWater(int[] buckets, double target, double effectiveGain) {
 
 		double extra = 0.0;
 		double need = 0.0;
@@ -51,7 +51,7 @@ public class PourWaterInBucket {
 		System.out.println("extra--" + extra);
 		System.out.println("need--" + need);
 
-		return extra * kPercentage >= need;
+		return extra * effectiveGain >= need;
 	}
 
 }

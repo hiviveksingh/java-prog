@@ -9,19 +9,52 @@ public class LongestIncreasingSubsequence {
 
 	public static void main(String[] args) {
 
-		System.out.println(solve(new int[] { 10, 9, 2, 5, 3, 7, 101, 18 }));
+	//	System.out.println(solve(new int[] { 10, 9, 2, 5, 3, 7, 101, 18 }));
+		
+		System.out.println(solve(new int[] { 10, 9, 3, 5, 2, 7, 101, 18 }));  //-[2, 5, 7, 101]
 
-		System.out.println(solve(new int[] { 0, 1, 0, 3, 2, 3 }));
+		//System.out.println(solve(new int[] { 0, 1, 0, 3, 2, 3 }));
 
-		System.out.println(solve(new int[] { 7, 7, 7, 7, 7, 7 }));
+		//System.out.println(solve(new int[] { 7, 7, 7, 7, 7, 7 }));
 
 	}
 
 	private static int solve(int[] intArray) {
 
-		return lengthOfLIS(intArray);
+		return lengthOfLISBest(intArray);
 	}
 
+	static int lengthOfLISBest(int[] intArry) {
+
+		ArrayList<Integer> intList = new ArrayList<>();
+		for (int i = 0; i < intArry.length; i++) {
+			intList.add(1);
+		}
+
+		for (int i = intArry.length - 1; i >= 0; i--) {
+			
+			System.out.println("  For I " + intArry[i]);
+			System.out.println("  Value of J ");
+			
+			for (int j = i + 1; j < intArry.length; j++) {
+			
+				System.out.print(" " + intArry[j]);
+				
+				if(intArry[i] < intArry[j]) {
+					intList.set(i, Math.max(intList.get(i), 1 + intList.get(j)))	;
+					
+				}
+			}
+			
+			System.out.println(intList);
+		}
+
+		return intList.size();
+	}
+	
+	
+	
+	
 	static int lengthOfLIS(int[] intArry) {
 
 		ArrayList<Integer> intList = new ArrayList<>();
