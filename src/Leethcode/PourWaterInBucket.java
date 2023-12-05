@@ -12,10 +12,10 @@ public class PourWaterInBucket {
 
 	public static double equalizeWater(int[] buckets, int loss) {
 
-		final double acceptedDiff = 1e-5;
+		final double acceptedDiff = .000005 ;//1e-5;
 		
-		final double kPercentage = (100 - loss) / (double) 100;
-		System.out.println("kPercentage--" + kPercentage);
+		final double effectiveGain = (100 - loss) / (double) 100;
+		System.out.println("effectiveGain--" + effectiveGain);
 		double minW = 0.0;
 		double maxW = Arrays.stream(buckets).max().getAsInt();
 
@@ -26,7 +26,7 @@ public class PourWaterInBucket {
 			final double median = (minW + maxW) / 2;
 
 			System.out.println("m--" + median);
-			if (canReAdjustWater(buckets, median, kPercentage))
+			if (canReAdjustWater(buckets, median, effectiveGain))
 				minW = median;
 			else
 				maxW = median;

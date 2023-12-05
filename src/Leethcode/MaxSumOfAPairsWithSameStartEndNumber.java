@@ -23,7 +23,7 @@ public class MaxSumOfAPairsWithSameStartEndNumber {
 			System.out.println("Key ::"+ key +"--value --"+output.get(key).size());
 			List<Integer> valueList = output.get(key);
 			
-			if(valueList.size() >1 ) {
+			if(valueList.size() > 1 ) {
 				int machedSum = 0;
 				for (Integer item : valueList) {
 					machedSum += item;

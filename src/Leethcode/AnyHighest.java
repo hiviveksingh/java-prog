@@ -48,17 +48,24 @@ public class AnyHighest {
 	/*
 	 
 	 
+	 SELECT temp.salary  as "SecondHighestSalary"  FROM (
+          SELECT  e.salary ,   rownum rn from Employee e  order by e.salary desc
+    ) temp where temp.rn = 2
+    
+    
+    
 	 
-	 
-	 SELECT 
-*
-FROM
- (
-    SELECT 
-      SecondHighestSalary as "SecondHighestSalary"
-      FROM (  SELECT  Row_number() over (order by salary desc) as rn, e.SALARY as SecondHighestSalary  from Employee e )
-    where rn =2 ;
-) 
+		SELECT 
+		*
+		FROM
+		 (
+		    SELECT 
+		      SecondHighestSalary as "SecondHighestSalary"
+		      FROM (  SELECT  Row_number() over (order by salary desc) as rn, e.SALARY as SecondHighestSalary  from Employee e )
+		    where rn =2 ;
+		) 
+		
+		
 /*
 //SELECT Row_number() over (order by salary desc) as rn, e.*  from Employee;
 
