@@ -1,6 +1,8 @@
 package Leethcode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -25,10 +27,11 @@ public class LongestIncreasingSubsequence {
 	}
 
 	static int lengthOfLISBest(int[] intArry) {
-
-		ArrayList<Integer> intList = new ArrayList<>();
+		
+		Integer[] LHSCountByIndex = new Integer [intArry.length];	
+	
 		for (int i = 0; i < intArry.length; i++) {
-			intList.add(1);
+			LHSCountByIndex[i]= 0;
 		}
 
 		for (int i = intArry.length - 1; i >= 0; i--) {
@@ -41,15 +44,22 @@ public class LongestIncreasingSubsequence {
 				System.out.print(" " + intArry[j]);
 				
 				if(intArry[i] < intArry[j]) {
-					intList.set(i, Math.max(intList.get(i), 1 + intList.get(j)))	;
+					
+					System.out.println( "   "+LHSCountByIndex[i]+" i index value j " + LHSCountByIndex[j]);
+					
+					LHSCountByIndex[i] =  Math.max( LHSCountByIndex[i], 1 + LHSCountByIndex[i])	;
 					
 				}
 			}
 			
-			System.out.println(intList);
+		//	System.out.println(LHSCountByIndex);
+		}
+		
+		for (int i = 0; i < LHSCountByIndex.length; i++) {
+			System.out.println( " final  " + LHSCountByIndex[i]);
 		}
 
-		return intList.size();
+		return  Collections.max(Arrays.asList(LHSCountByIndex));
 	}
 	
 	
