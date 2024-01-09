@@ -1,15 +1,24 @@
 
 package Leethcode;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+
+
 public class SameSumOfPair {
 
 	public static void main(String[] args) {
-
-		System.out.println(" Output...."+solution(new Array[]{1, 9, 8, 100, 2}));
+		int[] numbers = {1, 9, 8, 100, 2};
+		System.out.println(" Output...."+solution(numbers));
 
 	}
 
-  public int solution(int[] arr) {
+  public static Map<Integer, Integer> solution(int[] arr) {
+	  
         List<Integer> list = Arrays.stream(arr).boxed().sorted().collect(Collectors.toList());
         Map<Integer, Integer> individualFreqMap = new HashMap<>();
         for (Integer num: list) {
@@ -54,8 +63,8 @@ public class SameSumOfPair {
             }
         }
 
-        return sumMap.entrySet().stream().sorted(Map.Entry.<Integer, Integer>comparingByValue().reversed())
-                .findFirst().map(Map.Entry::getValue).get();
+        return sumMap;//.entrySet().stream().sorted(Map.Entry.<Integer, Integer>comparingByValue().reversed())
+                //.findFirst().map(Map.Entry::getValue).get(); // will retun 2
     }
 
 }
