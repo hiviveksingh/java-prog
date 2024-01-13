@@ -31,7 +31,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 				if (!set.contains(ch)) {
 					set.add(ch);
 				}else {
-					break;
+					break;//repition so break the loop
 				}
 			 }
 			
@@ -39,6 +39,8 @@ public class LongestSubstringWithoutRepeatingCharacters {
 	  
 	    return map;
 	}
+	
+
 
 	//  leetversion
 	public int lengthOfLongestSubstring(String s) {
