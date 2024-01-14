@@ -34,10 +34,12 @@ public class LongestIncreasingSubsequence {
         
         for(int i=1; i<nums.length; i++){
             for(int j=0; j<i; j++){
+            	
                 if(nums[i] > nums[j]){
                     Lis[i] = Math.max(Lis[i], 1+Lis[j]);
                     max = Math.max(max, Lis[i]);
                 }
+                
             }
         }
         

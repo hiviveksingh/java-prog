@@ -19,9 +19,11 @@ public class CoinChange {
 
 		for (int i = 1; i <= amount; i++) {
 			for (int j = 0; j < coins.length; j++) {
+				
 				if (i >= coins[j]) {
 					amt[i] = Math.min(amt[i], 1 + amt[i - coins[j]]);
 				}
+				
 			}
 		}
 
