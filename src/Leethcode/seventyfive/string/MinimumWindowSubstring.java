@@ -9,7 +9,8 @@ class MinimumWindowSubstring {
 	
 	public static void main(String[] args) {
 
-		System.out.println(  solveIt("", "") );
+		System.out.println(  solveIt("ADOBECODEBANC", "ABC") );
+		System.out.println(  solveIt("a", "a") );
 
 	}
 	
